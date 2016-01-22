@@ -1,0 +1,73 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:System="clr-namespace:System;assembly=mscorlib" x:Name="mainWindow" mc:Ignorable="d" x:Class="Froser.Quick.UI.QuickMainWindow"
+        xmlns:local="clr-namespace:Froser.Quick.UI"
+        Title="QuickMainWindow" Height="612" Width="545" WindowStartupLocation="CenterScreen" Topmost="True" ShowInTaskbar="False" WindowStyle="None" ResizeMode="NoResize" UseLayoutRounding="False" AllowsTransparency="True" Background="Transparent" SnapsToDevicePixels="True">
+    <Window.Resources>
+        <RoutedUICommand x:Key="TabKeyPressed" Text="" />
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Key="Tab" Command="{StaticResource TabKeyPressed}"/>
+    </Window.InputBindings>
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    <Grid Margin="0,0,0,0">
+        <Border x:Name="backgroundBorder" BorderThickness="0" Margin="0" CornerRadius="10" Opacity="0.1" Background="White"/>
+        <Grid>
+            <Border x:Name="innerBorder" Background="#FFEBEBEB" Margin="10" CornerRadius="10" Grid.RowSpan="2">
+                <Grid>
+                    <Grid.Resources>
+                        <Style x:Key="quickListItemStyle" TargetType="{x:Type ListBoxItem}">
+                            <Setter Property="Template" >
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                        <Border x:Name="bd">
+                                            <ContentPresenter></ContentPresenter>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="#FFD1D1D1" TargetName="bd"/>
+                                                <Setter Property="CornerRadius" Value="10" TargetName="bd"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <RichTextBox x:Name="searchTextBox" HorizontalContentAlignment="Stretch" 
+                                 VerticalContentAlignment="Stretch" 
+                                 FontFamily="Consolas" FontSize="22" Margin="8,8,8,8" FontWeight="Bold" 
+                                 AcceptsReturn="False" AutoWordSelection="False" Opacity="0.6" 
+                                 BorderThickness="0" Background="#FFD1D1D1" Foreground="#FF000000" 
+                                 IsTabStop="False">
+                        <FlowDocument AllowDrop="False" OverridesDefaultStyle="True" MaxPageHeight="1" PageWidth="2048"/>
+                    </RichTextBox>
+                    <Border HorizontalAlignment="Right" Width="20" Height="20" VerticalAlignment="Top" Margin="0,2,2,0" CornerRadius="10" Background="#FFEBEBEB">
+                        <Image x:Name="iconLock" Margin="4"></Image>
+                    </Border>
+                    <local:QuickListBox x:Name="quickListBox" Margin="8,4,8,0" RenderTransformOrigin="5,0" Grid.Row="1" Opacity="0.8" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="True" Background="#FFEBEBEB" BorderThickness="0" Focusable="False">
+                        <local:QuickListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <VirtualizingStackPanel IsItemsHost="True" UseLayoutRounding="False" Orientation="Vertical"/>
+                            </ItemsPanelTemplate>
+                        </local:QuickListBox.ItemsPanel>
+                        <local:QuickListBox.Template>
+                            <ControlTemplate TargetType="{x:Type ListBox}">
+                                <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="True" CornerRadius="4">
+                                    <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </local:QuickListBox.Template>
+                    </local:QuickListBox>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

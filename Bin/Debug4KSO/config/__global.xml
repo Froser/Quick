@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<QuickModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProgramName />
+  <BorderColorR>255</BorderColorR>
+  <BorderColorG>255</BorderColorG>
+  <BorderColorB>255</BorderColorB>
+  <Left>Left</Left>
+  <Width>Width</Width>
+  <Top>Top</Top>
+  <Search>GetSelection</Search>
+  <MethodList>
+    <QuickMethod>
+      <MethodName>BM</MethodName>
+      <MethodScript>Call("http://wpswebsvr.wps.kingsoft.net/ksbm/", "")</MethodScript>
+      <MethodDescription>打开Bug Manager</MethodDescription>
+      <MethodParamRegex />
+      <MethodDefArgs />
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+    <QuickMethod>
+      <MethodName>BM {ID}</MethodName>
+      <MethodScript>Call("http://wpswebsvr.wps.kingsoft.net/ksbm/ViewIssue.aspx?IssueID={$1}", "")</MethodScript>
+      <MethodDescription>跳转到Bug Mananger中指定的Bug ID</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs />
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+    <QuickMethod>
+      <MethodName>代码审查[daimashencha]</MethodName>
+      <MethodScript>Call("http://10.20.172.159/reviews/dashboard/", "")</MethodScript>
+      <MethodDescription>打开在线代码审查页面</MethodDescription>
+      <MethodParamRegex />
+      <MethodDefArgs />
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+    <QuickMethod>
+      <MethodName>代码审查[daimashencha] {ID}</MethodName>
+      <MethodScript>Call("http://10.20.172.159/reviews/r/{$1}/", "")</MethodScript>
+      <MethodDescription>跳转到在线代码审查中指定的条目</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs />
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+  </MethodList>
+</QuickModel>

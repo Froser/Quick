@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+    <version value="1.0.0.19">
+        <description>在MSO、WPS中按两下Quick快捷键可以激活全局菜单。采用全新的升级方式，以后将自动升级，不需要手动操作。注意：对于Win8以上的系统，在使用上下文助手的时候可能需要提权。此时，MSO、WPS需要有与Quick相同的权限，Quick菜单才能激活。</description>
+        <url>/download/Quick.rar</url>
+        <filelist>
+            <file>quick.exe</file>
+            <file>sdk/IQuickPlugin.cs.update</file>
+        </filelist>
+    </version>
+
+    <version value="1.0.0.18">
+        <description>增加上下文菜单功能，修复bug</description>
+        <url>/download/Quick.rar</url>
+        <filelist>
+            <file>quick.exe</file>
+        </filelist>
+    </version>
+
+    <version value="1.0.0.16">
+        <description>修复无法使用插件的Bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.15">
+        <description>修复界面Bug及其他Bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.14">
+        <description>优化性能</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.13">
+        <description>修复Bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.12">
+        <description>修复插件可能无法接受参数的Bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.11">
+        <description>修复Bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.10">
+        <description>支持Tab键补全文件路径，支持全局划词搜索</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.9">
+        <description>支持全局调用</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.8">
+        <description>修复无法识别老版本的Office的Bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.7">
+        <description>修复着色的Bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.6">
+        <description>重写插件机制，节约内存，防止内存泄露</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.5">
+        <description>优化插件机制，修复匹配搜索字符串的bug</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.4">
+        <description>优化翻译插件，将翻译插件加入快捷菜单</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.3">
+        <description>优化插件机制，增加了一个自带的WPS、Word翻译插件</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.2">
+        <description>Quick 1.0.0.2 Beta版，支持WPS、ET、WPP、Word、Excel和Powerpoint的Quick调用，支持更新检查，支持加载插件，增强反馈机制。</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.1">
+        <description>Quick 1.0.0.1 测试版，支持WPS、ET、WPP、Word、Excel和Powerpoint的Quick调用，支持更新检查，支持加载插件。</description>
+        <url>/download/Quick.rar</url>
+    </version>
+
+    <version value="1.0.0.0">
+        <description>Quick测试版</description>
+        <url>/download/QuickBeta.rar</url>
+    </version>
+</info>

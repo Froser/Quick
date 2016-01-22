@@ -1,0 +1,114 @@
+*::-moz-selection {
+    color: rgba(255, 255, 255, 0.85);
+    background: none repeat scroll 0% 0% rgba(216, 76, 49, 0.8);
+}
+
+body{
+	font-family:"Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.background{
+    background-color: rgb(248, 246, 233);
+}
+
+.small-padding{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.image-container{
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.middle{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.vertical-middle{
+    vertical-align: middle;
+}
+
+.index{
+    color: #fff;
+	background: url('../img/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center top;
+	background-clip: border-box;
+	background-origin: padding-box;
+	background-size: 100% auto;
+}
+
+.logo{
+	text-align: center;
+	padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.logo-left{
+    text-align: left;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.intro{
+	padding: 25px;
+}
+
+.quick-title {
+    border-width: 1px 0px;
+    border-top-width: 1px;
+    border-right-width-value: 0px;
+    border-bottom-width: 1px;
+    border-left-width-value: 0px;
+    border-left-width-ltr-source: physical;
+    border-left-width-rtl-source: physical;
+    border-right-width-ltr-source: physical;
+    border-right-width-rtl-source: physical;
+    border-style: solid none;
+    border-top-style: solid;
+    border-right-style-value: none;
+    border-bottom-style: solid;
+    border-left-style-value: none;
+    border-left-style-ltr-source: physical;
+    border-left-style-rtl-source: physical;
+    border-right-style-ltr-source: physical;
+    border-right-style-rtl-source: physical;
+    border-color: #FFF -moz-use-text-color;
+    border-top-color: #FFF;
+    border-right-color-value: -moz-use-text-color;
+    border-bottom-color: #FFF;
+    border-left-color-value: -moz-use-text-color;
+    border-left-color-ltr-source: physical;
+    border-left-color-rtl-source: physical;
+    border-right-color-ltr-source: physical;
+    border-right-color-rtl-source: physical;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 108px;
+    letter-spacing: 2px;
+    margin: 0px auto;
+    padding: 0px 58px;
+    position: relative;
+    width: auto;
+}
+
+.shadow{
+    -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000)";
+    /* For IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}

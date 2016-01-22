@@ -1,0 +1,697 @@
+<?xml version="1.0"?>
+<QuickModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProgramName>word.application</ProgramName>
+  <BorderColorR>77</BorderColorR>
+  <BorderColorG>130</BorderColorG>
+  <BorderColorB>228</BorderColorB>
+  <Left>Application.Left</Left>
+  <Width>Application.Width</Width>
+  <Top>Application.Top</Top>
+  <Search>Selection.Text</Search>
+
+  <MethodList>
+    <QuickMethod>
+      <MethodName>标尺[biaochi] : 切换[qiehuan]</MethodName>
+      <MethodScript>!ActiveWindow.DisplayRulers</MethodScript>
+      <MethodDescription>显示或隐藏标尺</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>True</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 插入[charubiaoge] {x,y}</MethodName>
+      <MethodScript>Selection.Tables.Add(Selection.Range, {$1}, {$2})</MethodScript>
+      <MethodDescription>在光标位置插入一个x行、y列的表格，默认为5行2列</MethodDescription>
+      <MethodParamRegex>\d</MethodParamRegex>
+      <MethodDefArgs>5,2</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 删除[shanchubiaoge]</MethodName>
+      <MethodScript>Selection.Tables[1].Delete()</MethodScript>
+      <MethodDescription>删除光标所在的表格</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 拆分单元格[chaifendanyuange] {x,y}</MethodName>
+      <MethodScript>Selection.Cells.Split({$1}, {$2})</MethodScript>
+      <MethodDescription>拆分光标所在的表格为x行、y列</MethodDescription>
+      <MethodParamRegex>\d</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 合并单元格[hebingdanyuange]</MethodName>
+      <MethodScript>Selection.Cells.Merge()</MethodScript>
+      <MethodDescription>合并所选单元格</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 拆分表格[chaifenbiaoge]</MethodName>
+      <MethodScript>Selection.SplitTable()</MethodScript>
+      <MethodDescription>拆分当前表格</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 删除行[shanchuhang]</MethodName>
+      <MethodScript>Selection.Rows.Delete()</MethodScript>
+      <MethodDescription>删除光标所选的表格行</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 删除列[shanchulie]</MethodName>
+      <MethodScript>Selection.Columns.Delete()</MethodScript>
+      <MethodDescription>删除光标所选的表格列</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 插入行[charuhang] 上[shang]</MethodName>
+      <MethodScript>Selection.Rows.Add(Selection.Rows[1])</MethodScript>
+      <MethodDescription>在光标所在表格行的上方插入新的一表格行</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 插入行[charuhang] 下[xia]</MethodName>
+      <MethodScript>Selection.Rows.Add()</MethodScript>
+      <MethodDescription>在光标所在表格行的下方插入新的一表格行</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 插入列[charulie] 左[zuo]</MethodName>
+      <MethodScript>Selection.Columns.Add(Selection.Columns[1])</MethodScript>
+      <MethodDescription>在光标所在表格列的左方插入新的一表格列</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>表格[biaoge] : 插入列[charulie] 右[you]</MethodName>
+      <MethodScript>Selection.Columns.Add()</MethodScript>
+      <MethodDescription>在光标所在表格列的右方插入新的一表格列</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>画布[huabu] : 插入画布[charuhuabu]</MethodName>
+      <MethodScript>ActiveDocument.Shapes.AddCanvas(90, 70, 420, 140)</MethodScript>
+      <MethodDescription>在默认位置插入一个画布</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>上标[shangbiao] : 开[kai]</MethodName>
+      <MethodScript>Selection.Font.Superscript</MethodScript>
+      <MethodDescription>为所选文字设置上标</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>上标[shangbiao] : 关[guan]</MethodName>
+      <MethodScript>Selection.Font.Superscript</MethodScript>
+      <MethodDescription>为所选文字取消设置上标</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>下标[xiabiao] : 开[kai]</MethodName>
+      <MethodScript>Selection.Font.Subscript</MethodScript>
+      <MethodDescription>为所选文字设置下标</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>下标[xiabiao] : 关[guan]</MethodName>
+      <MethodScript>Selection.Font.Subscript</MethodScript>
+      <MethodDescription>为所选文字取消设置下标</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>阴影[yinying] : 开[kai]</MethodName>
+      <MethodScript>Selection.Font.Shadow</MethodScript>
+      <MethodDescription>为所选文字设置阴影</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>阴影[yinying] : 关[guan]</MethodName>
+      <MethodScript>Selection.Font.Shadow</MethodScript>
+      <MethodDescription>为所选文字取消设置阴影</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>清除字体格式[qingchuzitigeshi]</MethodName>
+      <MethodScript>Selection.ClearFormatting()</MethodScript>
+      <MethodDescription>清除所选文字的格式</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 自动[zidong]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为自动</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-16777216</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 红色[hongse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为红色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>255</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 蓝色[lanse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为蓝色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16711680</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 白色[baise]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为白色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16777215</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 黄色[huangse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为黄色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>65535</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 绿色[lvse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为绿色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>32768</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 黑色[heise]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为黑色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 选择颜色[xuanzeyanse]</MethodName>
+      <MethodScript>@Win32Color("Selection.Font.Color")!Selection.Font.Color</MethodScript>
+      <MethodDescription>从颜色对话框中选择字体颜色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 宋体[songti]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为宋体</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>宋体</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 仿宋[fangsong]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为仿宋</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>仿宋</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 隶书[lishu]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为隶书</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>隶书</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 微软雅黑[weiruanyahei]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为微软雅黑</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>微软雅黑</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 黑体[heiti]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为黑体</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>黑体</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Times New Roman</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Times New Roman</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>"Times New Roman"</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Consolas</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Consolas</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>Consolas</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Arial</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Arial</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>Arial</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 字体名</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为指定名称的字体</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>批注[pizhu] : 插入[charupizhu] 批注内容</MethodName>
+      <MethodScript>Selection.Comments.Add(Selection.Range, "{$1}")</MethodScript>
+      <MethodDescription>为所选内容插入一个批注</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs>修改批注</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>批注[pizhu] : 删除[shanchupizhu]</MethodName>
+      <MethodScript>Selection.Comments[1].Delete()</MethodScript>
+      <MethodDescription>删除当前批注</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>批注[pizhu] : 修改[xiugaipizhu] 批注内容</MethodName>
+      <MethodScript>Selection.Comments[1].Range.Text</MethodScript>
+      <MethodDescription>修改当前批注</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>书签[shuqian] : 插入[charushuqian] 书签名</MethodName>
+      <MethodScript>Selection.Bookmarks.Add("{$1}", Selection.Range)</MethodScript>
+      <MethodDescription>在当前位置插入一个书签</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>修订[xiuding] : 开[kai]</MethodName>
+      <MethodScript>ActiveDocument.TrackRevisions</MethodScript>
+      <MethodDescription>打开修订模式</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>True</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>修订[xiuding] : 关[guan]</MethodName>
+      <MethodScript>ActiveDocument.TrackRevisions</MethodScript>
+      <MethodDescription>关闭修订模式</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>False</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>修订[xiuding] : 接受此处[jieshoucichu]</MethodName>
+      <MethodScript>Selection.Range.Revisions.AcceptAll()</MethodScript>
+      <MethodDescription>接受光标选择区域的所有修订</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>修订[xiuding] : 拒绝此处[jujuecichu]</MethodName>
+      <MethodScript>Selection.Range.Revisions.RejectAll()</MethodScript>
+      <MethodDescription>接受光标选择区域的所有修订</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>修订[xiuding] : 接受全部[jieshouquanbu]</MethodName>
+      <MethodScript>ActiveDocument.AcceptAllRevisions()</MethodScript>
+      <MethodDescription>接受文档中的全部修订</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>修订[xiuding] : 拒绝全部[jujuequanbu]</MethodName>
+      <MethodScript>ActiveDocument.RejectAllRevisions()</MethodScript>
+      <MethodDescription>拒绝文档中的全部修订</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>书签[shuqian] : 删除[shanchushuqian]</MethodName>
+      <MethodScript>Selection.Bookmarks[1].Delete()</MethodScript>
+      <MethodDescription>修改当前书签</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>跳转[gotopage tiaozhuan] : 页码[yema]</MethodName>
+      <MethodScript>Selection.GoTo(1, 1, {$1}, "")</MethodScript>
+      <MethodDescription>光标跳转到指定页码</MethodDescription>
+      <MethodParamRegex>\d</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>跳转[gotosection tiaozhuan] : 节[jie]</MethodName>
+      <MethodScript>Selection.GoTo(0, 1, {$1}, "")</MethodScript>
+      <MethodDescription>光标跳转到指定节</MethodDescription>
+      <MethodParamRegex>\d</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>跳转[gotoline tiaozhuan] : 行[hang]</MethodName>
+      <MethodScript>Selection.GoTo(3, 1, {$1}, "")</MethodScript>
+      <MethodDescription>光标跳转到指定行</MethodDescription>
+      <MethodParamRegex>\d</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>跳转[gotobookmark tiaozhuan] : 书签[shuqian] 书签名</MethodName>
+      <MethodScript>Selection.GoTo(-1, 1, 0, "{$1}")</MethodScript>
+      <MethodDescription>光标跳转到指定书签</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>样式[yangshi] : 正文[zhengwen]</MethodName>
+      <MethodScript>Selection.Range.Style</MethodScript>
+      <MethodDescription>将所选内容的样式设置为正文</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>正文</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>样式[yangshi] : 标题 1[biaoti 1]</MethodName>
+      <MethodScript>Selection.Range.Style</MethodScript>
+      <MethodDescription>将所选内容的样式设置为标题 1</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>"标题 1"</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>样式[yangshi] : 标题 2[biaoti 2]</MethodName>
+      <MethodScript>Selection.Range.Style</MethodScript>
+      <MethodDescription>将所选内容的样式设置为标题 2</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>"标题 2"</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>样式[yangshi] : 标题 3[biaoti 3]</MethodName>
+      <MethodScript>Selection.Range.Style</MethodScript>
+      <MethodDescription>将所选内容的样式设置为标题 3</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>"标题 3"</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>样式[yangshi] : 样式名</MethodName>
+      <MethodScript>Selection.Range.Style</MethodScript>
+      <MethodDescription>将所选内容的样式设置为输入的样式名</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>视图[shitu] : 页面视图[yemianshitu]</MethodName>
+      <MethodScript>ActiveWindow.View.Type</MethodScript>
+      <MethodDescription>将页面视图切换为页面视图</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>3</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>视图[shitu] : 大纲视图[dagangshitu]</MethodName>
+      <MethodScript>ActiveWindow.View.Type</MethodScript>
+      <MethodDescription>将页面视图切换为大纲视图</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>2</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>视图[shitu] : Web视图[shitu]</MethodName>
+      <MethodScript>ActiveWindow.View.Type</MethodScript>
+      <MethodDescription>将页面视图切换为Web视图</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>6</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>拆分窗口[chaifenchuangkou] 切换[qiehuan]</MethodName>
+      <MethodScript>!ActiveWindow.Split</MethodScript>
+      <MethodDescription>打开或取消拆分窗口</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>打印[dayin] : 全部[quanbu]</MethodName>
+      <MethodScript>ActiveDocument.PrintOut(false, true, 0)</MethodScript>
+      <MethodDescription>打印文档的全部内容</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>打印[dayin] : 当前页[dangqianye]</MethodName>
+      <MethodScript>ActiveDocument.PrintOut(false, true, 2)</MethodScript>
+      <MethodDescription>打印文档的当前页</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>打印[dayin] : 页码范围[yemafanwei] {x,y}</MethodName>
+      <MethodScript>ActiveDocument.PrintOut(false, true, 3, "", {$1}, {$2})</MethodScript>
+      <MethodDescription>打印文档的第a页到第b页</MethodDescription>
+      <MethodParamRegex>\d</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张方向[zhizhangfangxiang] : 横向[hengxiang]</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.Orientation</MethodScript>
+      <MethodDescription>更改页面设置中的纸张方向为横向</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张方向[zhizhangfangxiang] : 纵向[zongxiang]</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.Orientation</MethodScript>
+      <MethodDescription>更改页面设置中的纸张方向为纵向</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : A3</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为A3</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>6</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : A4</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为A4</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>7</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : B4</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为B4</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>10</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : B5</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为B5</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>11</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : 信纸[xinzhi]</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为Letter</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>2</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : 法律专用纸[falvzhuanyongzhi]</MethodName>
+      <MethodScript>ActiveDocument.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为Legal</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>4</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>兼容模式[jianrongmoshi]</MethodName>
+      <MethodScript>ActiveDocument.SetCompatibilityMode(11)</MethodScript>
+      <MethodDescription>将文档模式改为wdWord2003</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>非兼容模式[feijianrongmoshi]</MethodName>
+      <MethodScript>ActiveDocument.SetCompatibilityMode(14)</MethodScript>
+      <MethodDescription>将文档模式改为wdWord2010</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>窗口最大化[chuangkouzuidahua maximum]</MethodName>
+      <MethodScript>Application.WindowState</MethodScript>
+      <MethodDescription>使程序窗口最大化</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+    
+    <QuickMethod>
+      <MethodName>窗口还原[chuangkouhuanyuan normal]</MethodName>
+      <MethodScript>Application.WindowState</MethodScript>
+      <MethodDescription>使程序窗口大小还原</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+  </MethodList>
+</QuickModel>
