@@ -11,6 +11,8 @@ namespace Froser.Quick
         global::System.Collections.Hashtable keyIDs = new global::System.Collections.Hashtable();
         IntPtr hWnd;
 
+
+
         public event HotkeyEventHandler OnHotkey;
 
         public enum KeyFlags
