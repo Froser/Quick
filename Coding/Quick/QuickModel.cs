@@ -34,7 +34,7 @@ namespace Froser.Quick
             this.Top = cloneProperty.Top;
             this.Width = cloneProperty.Width;
         }
-        
+
         public static void CreateTemplate()
         {
             var template = new QuickModel();
@@ -55,7 +55,9 @@ namespace Froser.Quick
         {
             XmlSerializer ser = new XmlSerializer(typeof(QuickModel));
             QuickModel ret = null;
-            using (FileStream fs = new FileStream(Path.Combine(QuickUtilities.DirectoryFromDomain(@"config\"), filename), FileMode.Open, FileAccess.Read))
+            using (FileStream fs =
+                new FileStream(Path.Combine(QuickUtilities.DirectoryFromDomain(@"config\"), filename), FileMode.Open,
+                    FileAccess.Read))
             {
                 ret = (QuickModel)ser.Deserialize(fs);
                 return ret;
@@ -79,7 +81,7 @@ namespace Froser.Quick
         public static String[] GetArguments(string input)
         {
             char quote = '"';
-            char[] separator = new char [] { ' ', ',' };
+            char[] separator = new char[] { ' ', ',' };
             //state:
             //-1: parameter with no quote
             //0: start
@@ -104,6 +106,7 @@ namespace Froser.Quick
                             value += c;
                         }
                         break;
+
                     case 0:
                         if (c == quote)
                         {
@@ -115,6 +118,7 @@ namespace Froser.Quick
                             i--;
                         }
                         break;
+
                     case 1:
                         if (c == quote)
                         {
@@ -141,9 +145,11 @@ namespace Froser.Quick
         {
             //condition为筛选条件，达到条件者被保留
             QuickModel model = new QuickModel();
-            Action<QuickMethod> copyAction = (method) => {
-                if (condition(method)) {
-                    model.MethodList.Add (method);
+            Action<QuickMethod> copyAction = (method) =>
+            {
+                if (condition(method))
+                {
+                    model.MethodList.Add(method);
                 }
             };
             MethodList.ForEach(copyAction);
@@ -152,6 +158,7 @@ namespace Froser.Quick
 
         // meta，不要修改变量名
         public String ProgramName { get; set; }
+
         public int BorderColorR { get; set; }
         public int BorderColorG { get; set; }
         public int BorderColorB { get; set; }
