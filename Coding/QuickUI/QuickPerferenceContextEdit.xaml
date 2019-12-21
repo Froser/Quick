@@ -1,0 +1,27 @@
+﻿<Window x:Class="Froser.Quick.UI.QuickPerferenceContextEdit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Quick上下文菜单项编辑" Height="227" Width="452"
+        Icon="Resources/icons/quick.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22*" />
+            <RowDefinition Height="22*" />
+            <RowDefinition Height="23*" />
+            <RowDefinition Height="21*" />
+            <RowDefinition Height="23*" />
+            <RowDefinition Height="21*" />
+            <RowDefinition Height="23*" />
+            <RowDefinition Height="34*" />
+            <RowDefinition FrameworkElement.FlowDirection="RightToLeft" Height="9" />
+        </Grid.RowDefinitions>
+        <TextBlock FontWeight="Bold" Margin="2">上下文编辑</TextBlock>
+        <TextBlock Grid.Row="1" Margin="2">名称</TextBlock>
+        <TextBox x:Name="tb_name" Grid.Row="2" Margin="2"/>
+        <TextBlock Grid.Row="3" Margin="2">行为</TextBlock>
+        <TextBox x:Name="tb_behavior" Grid.Row="4" Margin="2"/>
+        <TextBlock Grid.Row="5" Margin="2">运行参数</TextBlock>
+        <TextBox x:Name="tb_argument" Grid.Row="6" Margin="2"/>
+        <Button x:Name="btn_done" Grid.Row="7" Margin="375,2,4,2" IsDefault="True">完成</Button>
+    </Grid>
+</Window>

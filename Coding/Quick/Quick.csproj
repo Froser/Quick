@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D26B7BEA-D131-4801-A19B-E0AFC6740322}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Froser.Quick</RootNamespace>
+    <AssemblyName>Quick</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <BaseIntermediateOutputPath>..\..\obj\Debug\</BaseIntermediateOutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <BaseIntermediateOutputPath>..\..\obj\Release\</BaseIntermediateOutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>quick.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'D4KSO|AnyCPU' ">
+    <BaseIntermediateOutputPath>..\..\obj\Debug4KSO\</BaseIntermediateOutputPath>
+    <OutputPath>..\..\Bin\Debug4KSO\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;KSO</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'R4KSO|AnyCPU' ">
+    <BaseIntermediateOutputPath>..\..\obj\Release4KSO\</BaseIntermediateOutputPath>
+    <OutputPath>..\..\Bin\Release4KSO\</OutputPath>
+    <DefineConstants>TRACE;KSO</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>EC45F88B427F93107FACAA7D83D542648AA13D1E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Quick_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Froser.Quick.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IQuickWindow.cs" />
+    <Compile Include="IQuickPlugin.cs" />
+    <Compile Include="UI\QuickContextWindowHandler.cs" />
+    <Compile Include="QuickSafeReflection.cs" />
+    <Compile Include="QuickMethod.cs" />
+    <Compile Include="QuickPluginLoader.cs" />
+    <Compile Include="QuickCommonObject.cs" />
+    <Compile Include="QuickContext.cs" />
+    <Compile Include="QuickSafePluginRef.cs" />
+    <Compile Include="UI\QuickMainWindowHandler.cs" />
+    <Compile Include="Global.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Global.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuickConfig.cs" />
+    <Compile Include="QuickMultiVersion.cs" />
+    <Compile Include="QuickNotify.cs" />
+    <Compile Include="QuickReflection.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="QuickListener.cs" />
+    <Compile Include="QuickModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Hotkey.cs" />
+    <Compile Include="QuickUpdate.cs" />
+    <Compile Include="UI\QuickPreferenceWindowHandler.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="QuickVitality.cs" />
+    <EmbeddedResource Include="Global.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Global.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="quick.ico" />
+    <None Include="Resources\quick32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuickUI\QuickUI.csproj">
+      <Project>{f36b622e-4f74-4d69-912c-fb9de8915362}</Project>
+      <Name>QuickUI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>set config=$(ConfigurationName)
+IF /I %25config%25==Debug (
+xcopy /e /y /i $(OutDir)..\Debug4KSO\config $(OutDir)config
+xcopy /e /y /i $(OutDir)..\Debug4KSO\intro $(OutDir)intro
+md $(OutDir)plugins\3rdparty\everything
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything.exe $(OutDir)plugins\3rdparty\everything\everything.exe
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything32.dll $(OutDir)plugins\3rdparty\everything\everything32.dll
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything64.dll $(OutDir)plugins\3rdparty\everything\everything64.dll
+)
+
+IF /I %25config%25==Release (
+xcopy /e /y /i $(OutDir)..\Debug4KSO\config $(OutDir)config
+xcopy /e /y /i $(OutDir)..\Debug4KSO\intro $(OutDir)intro
+md $(OutDir)plugins\3rdparty\everything
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything.exe $(OutDir)plugins\3rdparty\everything\everything.exe
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything32.dll $(OutDir)plugins\3rdparty\everything\everything32.dll
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything64.dll $(OutDir)plugins\3rdparty\everything\everything64.dll
+)
+
+IF /I %25config%25==R4KSO (
+xcopy /e /y /i $(OutDir)..\Debug4KSO\config $(OutDir)config
+xcopy /e /y /i $(OutDir)..\Debug4KSO\intro $(OutDir)intro
+md $(OutDir)plugins\3rdparty\everything
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything.exe $(OutDir)plugins\3rdparty\everything\everything.exe
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything32.dll $(OutDir)plugins\3rdparty\everything\everything32.dll
+copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything64.dll $(OutDir)plugins\3rdparty\everything\everything64.dll
+)</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
