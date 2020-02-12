@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<QuickModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProgramName>powerpoint.application</ProgramName>
+  <BorderColorR>231</BorderColorR>
+  <BorderColorG>121</BorderColorG>
+  <BorderColorB>55</BorderColorB>
+  <Left>Left</Left>
+  <Width>Width</Width>
+  <Top>Top</Top>
+  <Search>ActiveWindow.Selection.TextRange.Text</Search>
+
+  <MethodList>
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 自动[zidong]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为自动</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-16777216</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 红色[hongse]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为红色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>255</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 蓝色[lanse]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为蓝色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16711680</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 白色[baise]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为白色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16777215</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 黄色[huangse]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为黄色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>65535</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 绿色[lvse]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为绿色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>32768</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 黑色[heise]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为黑色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 选择颜色[xuanzeyanse]</MethodName>
+      <MethodScript>@Win32Color("ActiveWindow.Selection.TextRange.Font.Color.RGB")!ActiveWindow.Selection.TextRange.Font.Color</MethodScript>
+      <MethodDescription>从颜色对话框中选择字体颜色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 宋体[songti]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为宋体</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>宋体</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 仿宋[fangsong]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为仿宋</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>仿宋</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 隶书[lishu]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为隶书</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>隶书</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 微软雅黑[weiruanyahei]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为微软雅黑</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>微软雅黑</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 黑体[heiti]</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为黑体</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>黑体</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Times New Roman</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Times New Roman</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>"Times New Roman"</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Consolas</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Consolas</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>Consolas</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Arial</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Arial</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>Arial</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 字体名</MethodName>
+      <MethodScript>ActiveWindow.Selection.TextRange.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为指定名称的字体</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>窗口最大化[chuangkouzuidahua maximum]</MethodName>
+      <MethodScript>WindowState</MethodScript>
+      <MethodDescription>使程序窗口最大化</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>3</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+    
+    <QuickMethod>
+      <MethodName>窗口还原[chuangkouhuanyuan normal]</MethodName>
+      <MethodScript>WindowState</MethodScript>
+      <MethodDescription>使程序窗口大小还原</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+  </MethodList>
+</QuickModel>

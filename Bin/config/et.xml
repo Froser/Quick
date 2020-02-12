@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<QuickModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProgramName>ket.application, et.application</ProgramName>
+  <BorderColorR>99</BorderColorR>
+  <BorderColorG>180</BorderColorG>
+  <BorderColorB>47</BorderColorB>
+  <Left>Application.Left</Left>
+  <Width>Application.Width</Width>
+  <Top>Application.Top</Top>
+  <Search>Selection.Text</Search>
+
+  <MethodList>
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 自动[zidong]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为自动</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-16777216</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 红色[hongse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为红色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>255</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 蓝色[lanse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为蓝色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16711680</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 白色[baise]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为白色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16777215</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 黄色[huangse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为黄色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>65535</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 绿色[lvse]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为绿色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>32768</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 黑色[heise]</MethodName>
+      <MethodScript>Selection.Font.Color</MethodScript>
+      <MethodDescription>将所选字体的颜色设置为黑色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体颜色[zitiyanse] : 选择颜色[xuanzeyanse]</MethodName>
+      <MethodScript>@Win32Color("Selection.Font.Color")!Selection.Font.Color</MethodScript>
+      <MethodDescription>从颜色对话框中选择字体颜色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-16777216</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 宋体[songti]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为宋体</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>宋体</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 仿宋[fangsong]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为仿宋</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>仿宋</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 隶书[lishu]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为隶书</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>隶书</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 微软雅黑[weiruanyahei]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为微软雅黑</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>微软雅黑</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 黑体[heiti]</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为黑体</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>黑体</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Times New Roman</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Times New Roman</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>"Times New Roman"</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Consolas</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Consolas</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>Consolas</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : Arial</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选文字的字体设置为Arial</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>Arial</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>字体[ziti] : 字体名</MethodName>
+      <MethodScript>Selection.Font.Name</MethodScript>
+      <MethodDescription>将所选的文字设置为指定名称的字体</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>视图[shitu] : 分页预览[fenyeyulan]</MethodName>
+      <MethodScript>ActiveWindow.View</MethodScript>
+      <MethodDescription>将视图设置为分页预览</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>2</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>视图[shitu] : 普通视图[putongshitu]</MethodName>
+      <MethodScript>ActiveWindow.View</MethodScript>
+      <MethodDescription>将视图设置为普通视图</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 自动[zidong]</MethodName>
+      <MethodScript>Selection.Interior.Color</MethodScript>
+      <MethodDescription>将所选单元格的填充颜色设置为自动</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-16777216</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 红色[hongse]</MethodName>
+      <MethodScript>Selection.Interior.Color</MethodScript>
+      <MethodDescription>将所选单元格的填充颜色设置为红色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>255</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 蓝色[lanse]</MethodName>
+      <MethodScript>Selection.Interior.Color</MethodScript>
+      <MethodDescription>将所选单元格的填充颜色设置为蓝色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16711680</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 白色[baise]</MethodName>
+      <MethodScript>Selection.Interior.Color</MethodScript>
+      <MethodDescription>将所选单元格的填充颜色设置为白色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>16777215</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 黄色[huangse]</MethodName>
+      <MethodScript>Selection.Interior.Color</MethodScript>
+      <MethodDescription>将所选单元格的填充颜色设置为黄色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>65535</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 绿色[lvse]</MethodName>
+      <MethodScript>Selection.Interior.Color</MethodScript>
+      <MethodDescription>将所选单元格的填充颜色设置为绿色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>32768</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 黑色[heise]</MethodName>
+      <MethodScript>Selection.Interior.Color</MethodScript>
+      <MethodDescription>将所选单元格的填充颜色设置为黑色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>0</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>填充[tianchong] : 选择颜色[xuanzeyanse]</MethodName>
+      <MethodScript>@Win32Color("Selection.Interior.Color")!Selection.Interior.Color</MethodScript>
+      <MethodDescription>从颜色对话框中选择字体颜色</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-16777216</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>批注[pizhu] : 插入[charupizhu]</MethodName>
+      <MethodScript>@AuthorAndContent("Application.UserName", "{$1}")!ActiveCell.AddComment("{$1}")</MethodScript>
+      <MethodDescription>为单元格插入一个批注</MethodDescription>
+      <MethodParamRegex>.</MethodParamRegex>
+      <MethodDefArgs></MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张方向[zhizhangfangxiang] : 横向[hengxiang]</MethodName>
+      <MethodScript>ActiveSheet.PageSetup.Orientation</MethodScript>
+      <MethodDescription>更改页面设置中的纸张方向为横向</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>2</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张方向[zhizhangfangxiang] : 纵向[zongxiang]</MethodName>
+      <MethodScript>ActiveSheet.PageSetup.Orientation</MethodScript>
+      <MethodDescription>更改页面设置中的纸张方向为纵向</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : A3</MethodName>
+      <MethodScript>ActiveWorkbook.ActiveSheet.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为A3</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>8</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : A4</MethodName>
+      <MethodScript>ActiveWorkbook.ActiveSheet.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为A4</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>9</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : B4</MethodName>
+      <MethodScript>ActiveWorkbook.ActiveSheet.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为B4</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>12</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : B5</MethodName>
+      <MethodScript>ActiveWorkbook.ActiveSheet.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为B5</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>13</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : 信纸[xinzhi]</MethodName>
+      <MethodScript>ActiveWorkbook.ActiveSheet.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为Letter</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>1</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>纸张大小[zhizhangdaxiao] : 法律专用纸[falvzhuanyongzhi]</MethodName>
+      <MethodScript>ActiveWorkbook.ActiveSheet.PageSetup.PaperSize</MethodScript>
+      <MethodDescription>将纸张大小更改为Legal</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>5</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>设置打印区域[shezhidayinquyu]</MethodName>
+      <MethodScript>@GetObject("{$1}")!ActiveSheet.PageSetup.PrintArea</MethodScript>
+      <MethodDescription>将当前选择区域设置为打印区域</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>Selection.Address</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>取消打印区域[quxiaodayinquyu]</MethodName>
+      <MethodScript>@EmptyString()!ActiveSheet.PageSetup.PrintArea</MethodScript>
+      <MethodDescription>清除之前设置的打印区域</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs> </MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+    <QuickMethod>
+      <MethodName>窗口最大化[chuangkouzuidahua maximum]</MethodName>
+      <MethodScript>Application.WindowState</MethodScript>
+      <MethodDescription>使程序窗口最大化</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-4137</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+    
+    <QuickMethod>
+      <MethodName>窗口还原[chuangkouhuanyuan normal]</MethodName>
+      <MethodScript>Application.WindowState</MethodScript>
+      <MethodDescription>使程序窗口大小还原</MethodDescription>
+      <MethodParamRegex></MethodParamRegex>
+      <MethodDefArgs>-4143</MethodDefArgs>
+      <MethodPriority>0</MethodPriority>
+    </QuickMethod>
+
+  </MethodList>
+</QuickModel>

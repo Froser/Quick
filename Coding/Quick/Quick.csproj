@@ -214,31 +214,14 @@
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent>set config=$(ConfigurationName)
-IF /I %25config%25==Debug (
-xcopy /e /y /i $(OutDir)..\Debug4KSO\config $(OutDir)config
-xcopy /e /y /i $(OutDir)..\Debug4KSO\intro $(OutDir)intro
-md $(OutDir)plugins\3rdparty\everything
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything.exe $(OutDir)plugins\3rdparty\everything\everything.exe
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything32.dll $(OutDir)plugins\3rdparty\everything\everything32.dll
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything64.dll $(OutDir)plugins\3rdparty\everything\everything64.dll
-)
 
 IF /I %25config%25==Release (
-xcopy /e /y /i $(OutDir)..\Debug4KSO\config $(OutDir)config
-xcopy /e /y /i $(OutDir)..\Debug4KSO\intro $(OutDir)intro
+xcopy /e /y /i $(OutDir)..\Debug\config $(OutDir)config
+xcopy /e /y /i $(OutDir)..\Debug\intro $(OutDir)intro
 md $(OutDir)plugins\3rdparty\everything
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything.exe $(OutDir)plugins\3rdparty\everything\everything.exe
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything32.dll $(OutDir)plugins\3rdparty\everything\everything32.dll
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything64.dll $(OutDir)plugins\3rdparty\everything\everything64.dll
-)
-
-IF /I %25config%25==R4KSO (
-xcopy /e /y /i $(OutDir)..\Debug4KSO\config $(OutDir)config
-xcopy /e /y /i $(OutDir)..\Debug4KSO\intro $(OutDir)intro
-md $(OutDir)plugins\3rdparty\everything
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything.exe $(OutDir)plugins\3rdparty\everything\everything.exe
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything32.dll $(OutDir)plugins\3rdparty\everything\everything32.dll
-copy /y $(OutDir)..\Debug4KSO\plugins\3rdparty\everything\everything64.dll $(OutDir)plugins\3rdparty\everything\everything64.dll
+copy /y $(OutDir)..\Debug\plugins\3rdparty\everything\everything.exe $(OutDir)plugins\3rdparty\everything\everything.exe
+copy /y $(OutDir)..\Debug\plugins\3rdparty\everything\everything32.dll $(OutDir)plugins\3rdparty\everything\everything32.dll
+copy /y $(OutDir)..\Debug\plugins\3rdparty\everything\everything64.dll $(OutDir)plugins\3rdparty\everything\everything64.dll
 )</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

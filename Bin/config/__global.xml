@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<QuickModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ProgramName />
+  <BorderColorR>255</BorderColorR>
+  <BorderColorG>255</BorderColorG>
+  <BorderColorB>255</BorderColorB>
+  <Left>Left</Left>
+  <Width>Width</Width>
+  <Top>Top</Top>
+  <Search>GetSelection</Search>
+  <MethodList>
+  </MethodList>
+</QuickModel>
